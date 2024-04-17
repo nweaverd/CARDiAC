@@ -117,7 +117,7 @@ def integrand_additive_term(chi1, Clchi1chi2_interp, chi_min_int, chi_max_int):
     """
     outer_integral, error = quadrature(integrand_nested_additive_term, chi_min_int,
                                        chi_max_int, args=(chi1, Clchi1chi2_interp), miniter=3,
-                                       maxiter=5, tol=1e-20)
+                                       maxiter=100, tol=1e-20)
     return outer_integral
 
 def integrand_nested_additive_term(chi2, chi1, Clchi1chi2_interp):

@@ -117,6 +117,8 @@ class Spec:
         if ells is None:
             # The ells where we want to evaluate the spectra
             self.ells = np.logspace(np.log10(50), np.log10(1500), 48, dtype=int)
+        else:
+            self.ells = ells
         self.unbiased_cls = bias_integrals.unbiased_term(self, self.ells, num_processes=num_processes, miniter=miniter,
                                       maxiter=maxiter, tol=tol)
 

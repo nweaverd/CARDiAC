@@ -158,7 +158,8 @@ def get_galaxy_ps(g_bias, zs_sampled, g2_bias=None, gbias_mode='linear'):
     if g2_bias is None:
         halomatter = True
     # ToDo: Choose k's more systematically
-    k = np.logspace(-3, 0, 200)
+    k = np.logspace(-3, 1, 256) 
+    # k = np.logspace(-3, 0, 200) 
     if gbias_mode=='anzu':
         try:
             # TODO: implement different galaxy bias for two samples in anzu galaxy cross-spectrum
